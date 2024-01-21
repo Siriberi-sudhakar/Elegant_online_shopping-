@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Payment Page</title>
+
+  <link rel="stylesheet" href="css/bootstrap.css">
+
+  <!-- Your existing CSS styles -->
+
+  <style>
+    /* Additional styling for the payment page */
+    #paymentDetails {
+      width: 100%;
+      height: 200px; /* Adjust the height as needed */
+    }
+
+    .total-price {
+      font-weight: bold; /* Apply bold styling to total price */
+    }
+
+    body{
+      background-image: linear-gradient(120deg, #f093fb 0%, #f5576c 100%);
+    }
+  </style>
+</head>
+<body>
+
+
+
+
+  <div class="container mt-1 mb-3">
+    <!-- Your checkout page content -->
+    <div class="row justify-content-center">
+      <div class="col-md-6">
+        <div class="card">
+          <div class="card-header bg-primary">
+            <h2>Let us know your order</h2>
+            <h5>We will contact you.</h5>
+          </div>
+          <div class="card-body">
+
+            <form action="https://api.web3forms.com/submit" method="POST">
+
+              <input type="hidden" name="access_key" value="29580fc5-21fb-416e-a17d-1714cf6fdc14">
+
+              <div class="form-group">
+                <label for="payment-mode">Select Payment Mode:</label>
+                <select class="form-control" id="payment-mode" required>
+                  <option value="online" name="pay mode">Offline Payment</option>
+                  <!-- Add more payment options if needed -->
+                </select>
+              </div>
+
+
+              <div class="form-group">
+                <label for="user-name">Full Name</label>
+                <input type="text" class="form-control" id="name" name="Customer-Name" required>
+              </div>
+              <div class="form-group">
+                <label for="card-holder-name">Email Id</label>
+                <input type="email" class="form-control" id="card-holder-name" name="Customer-Email ID" required>
+              </div>
+              <div class="form-group">
+                <label for="card-number">Contect Number</label>
+                <input type="tel" class="form-control" id="card-number" name="Phno number" placeholder="Enter working phno no..." required>
+              </div>
+              <div class="form-group">
+                <label for="address">Address line 1</label>
+                <input type="text" class="form-control" id="address" name="address 1" placeholder="district , City , village" required>
+              </div>
+
+              <div class="form-group">
+                <label for="address">Address line 2</label>
+                <input type="text" class="form-control" id="address" name="address 2" placeholder="colony , street , Door No.." required>
+              </div>
+
+
+              <div class="form-group">
+                <h3>The Items You Will Buy:</h3>
+              </div>
+
+              <!-- Display Cart Items in a Textarea -->
+              
+              <textarea id="paymentDetails" name="ordering produts_details" readonly  rows="10" cols="60" style="font-size: medium; font-weight: bold;"  ></textarea> <br><br>
+              
+              <!--textarea id="cartItemsTextarea" name="produts_details" rows="10" cols="60" readonly></textarea> <br><br-->
+
+              <!-- Checkout Button -->
+              <button onclick="checkout()" type="submit" class="btn btn-primary">Place Order</button>
+
+
+            </form>
+
+
+          </div>
+
+         </div>
+      </div>
+    </div>
+
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- Display the cart item details and total price -->
+
+
+<!-- Your existing JavaScript code -->
+
+<script>
+  // Function to display cart item details and total price
+  function displayPaymentDetails() {
+    const queryString = window.location.search;
+    const urlParams = new URLSearchParams(queryString);
+    const cartItemsParam = urlParams.get('cartItems');
+
+    if (cartItemsParam) {
+      const cartItems = JSON.parse(decodeURIComponent(cartItemsParam));
+
+      const paymentDetailsTextarea = document.getElementById('paymentDetails');
+
+      // Calculate total price
+      const totalPrice = cartItems.reduce((total, item) => {
+        const itemTotal = (item.price || 0) * (item.quantity || 1);
+        return total + itemTotal;
+      }, 0);
+
+      // Display cart item details in the textarea
+      const paymentDetails = cartItems.map(item => {
+        const itemTotal = (item.price || 0) * (item.quantity || 1);
+        return `\n---> ${item.name} - ₹ ${item.price || 0}.00 --> Qty: ${item.quantity || 1}`;
+      });
+
+      // Add the total price at the end with bold styling
+      paymentDetails.push(`\n \nTotal Price: ₹${totalPrice.toFixed(2)}`);
+
+      // Set the content of the textarea
+      paymentDetailsTextarea.value = paymentDetails.join('\n');
+    }
+  }
+
+  // Call the function to display details when the page loads
+  displayPaymentDetails();
+</script>
+
+</body>
+</html>
