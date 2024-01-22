@@ -269,6 +269,7 @@ Navigation
 .nav-center .nav-link {
   font-size: 1.8rem;
   padding: 1rem;
+ 
 }
 
 .nav-center .nav-link:hover {
@@ -284,11 +285,18 @@ Navigation
 
 /* Icons */
 
+
+
+
+
+
+
 .icon {
   cursor: pointer;
-  font-size: 2.5rem;
+  font-size: 4rem;
   padding: 0 1rem;
   color: #555;
+  margin-right: -5rem;
   position: relative;
 }
 
@@ -308,6 +316,12 @@ Navigation
   width: 2rem;
   justify-content: center;
 }
+
+.top-nav div {
+  justify-content: center;
+  height: 3rem;
+}
+
 
 @media only screen and (max-width: 768px) {
   .nav-list {
@@ -336,14 +350,25 @@ Navigation
   }
 
   .nav-list .nav-link {
-    font-size: 2rem;
+    height: 5rem;
+    font-size: 3rem;
+    font-weight: bolder;
     color: var(--black);
+  }
+
+
+
+
+
+
+  .icon{
+    font-size: 4rem;
   }
 
   .nav-center .hamburger {
     display: block;
     color: var(--black);
-    font-size: 3rem;
+    font-size: 5rem;
   }
 
   .icons {
@@ -398,23 +423,29 @@ Hero Area
 }
 
 .hero .left h1 {
+  color: #000;
   font-size: 5rem;
   margin: 1rem 0;
 }
 
-.hero .left p {
+.hero .left span , p {
+  color: #000;
   font-size: 1.6rem;
   margin-bottom: 1rem;
 }
 
 .hero .left .hero-btn {
+  border-radius: 2rem;
   display: inline-block;
   padding: 1rem 3rem;
   font-size: 1.6rem;
   margin-top: 1rem;
-  background-color: var(--green);
+  background-color: #25693f;
   color: white;
 }
+
+
+
 
 .hero .right {
   flex: 0 0 50%;
@@ -431,9 +462,20 @@ Hero Area
   transition: all 1000ms ease-in-out;
 }
 
+/* my code */
+
+#slide2_content{
+  display: none;
+}
+
+.center .left{
+    margin-top: -5rem;
+    margin-left: 20rem;
+}
+
 .center .right img.img1 {
-  width: 225%;
-  right: -50%;
+  width: 60%;
+  right: -10%;
   bottom: -40%;
 }
 
@@ -443,6 +485,7 @@ Hero Area
   bottom: -40%;
 }
 
+/* my code */
 .glide__slide--active .center .right img {
   bottom: -3%;
   opacity: 1;
@@ -478,13 +521,47 @@ Hero Media Query
 }
 
 @media only screen and (max-width: 567px) {
+
+  #bg1{
+    width: 70rem !important;
+    height: 95rem !important;
+    margin-right: -21rem;
+    
+  }
+
+
+  #bg2{
+    width: 80rem !important;
+    height: 93rem !important;
+    margin-right: -2rem !important;
+    margin-bottom: 2rem !important;
+    
+  }
+
+  #slide2_content{
+    display: block;
+  }
+
+
+
+  .center .left{
+    margin-top: 45rem;
+    margin-left: 10rem;
+  }
+
+
+  
+
+
+
+
   .center .right img.img1 {
     width: 30rem;
   }
 
-  .center .right img.img2 {
-    width: 33rem;
-  }
+  /*.center .right img.img2 {
+    width: 30rem !important;
+  } */
 
   .hero,
   .hero .glide__slides {
@@ -493,14 +570,20 @@ Hero Media Query
   }
 
   .hero .left h1 {
-    font-size: 3rem;
+    color: #fff;
+    text-shadow: #000;
+    font-size: 4rem;
   }
 
   .hero .left span {
-    font-size: 1.4rem;
+    color: #fff;
+    text-shadow: #000;
+    font-size: 2.4rem;
   }
   .hero .left p {
-    font-size: 1.5rem;
+    color: #fff;
+    text-shadow: #000;
+    font-size: 2.5rem;
     width: 80%;
   }
 }
@@ -527,10 +610,13 @@ Hero Media Query
   position: relative;
   cursor: pointer;
   text-align: center;
-  border-radius: 5rem;
-  border: 2px solid;
-  border-color: black;
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.4);
+  border-radius: 10px
+  
+  
 }
+
+
 
 .cat-center .cat:not(:last-child) {
   margin-right: 3rem;
@@ -553,14 +639,40 @@ Hero Media Query
   bottom: 15%;
   left: 50%;
   transform: translateX(-50%);
-  background-color: var(--white);
+  background-color: #25693F;
+  color: #fff;
   width: 18rem;
   height: 5rem;
   line-height: 5rem;
   text-align: center;
   font-size: 2rem;
   font-weight: 500;
+  border-radius: 3rem;
 }
+
+
+
+
+.addcart-btn{
+  position: absolute;
+  bottom: -8%;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #25693F;
+  color: #fff;
+  width: 18rem;
+  height: 5rem;
+  line-height: 5rem;
+  text-align: center;
+  font-size: 2rem;
+  font-weight: 500;
+  border-radius: 3rem;
+}
+
+
+
+
+
 
 @media only screen and (max-width: 1200px) {
   .cat-center .cat img {
@@ -608,13 +720,16 @@ Hero Media Query
 .title {
   text-align: center;
   margin-bottom: 5rem;
+  font-weight: bolder;
+  font-family: Poppins,sans-serif;
 }
 
 .title h1 {
-  font-size: 3rem;
-  text-transform: uppercase;
+  font-size: 42px;
+  
   margin-bottom: 1rem;
-  font-weight: 500;
+  font-weight: bolder;
+  font-family: Poppins,sans-serif;
 }
 
 .product-center {
@@ -639,8 +754,8 @@ Hero Media Query
   height: 31rem;
   object-fit: cover;
   transition: all 500ms linear;
-  border-radius: 3rem;
-  border: 1px solid black;
+  
+  
 }
 
 .product-info {
@@ -719,6 +834,9 @@ Hero Media Query
   overflow: hidden;
   cursor: pointer;
   width: 100%;
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.4);
+  border-radius: 10px;
+
 }
 
 .product-item .overlay::after {
@@ -750,7 +868,7 @@ Hero Media Query
   background-color: var(--green);
   padding: 0.5rem 1rem;
   color: var(--white);
-  border-radius: 2rem;
+  border-radius: 3rem;
   font-size: 1.5rem;
 }
 
@@ -977,7 +1095,7 @@ Hero Media Query
 /* Footer */
 .footer {
   padding: 7rem 1rem;
-  background-image: linear-gradient(120deg, #f093fb 0%, #f5576c 100%);
+  background: #F8C027;
 }
 
 footer .row {
@@ -1350,9 +1468,10 @@ td a {
 }
 
 td img {
-  width: 8rem;
-  height: 8rem;
+  width: 10rem;
+  height: 10rem;
   margin-right: 1rem;
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.4);
 }
 
 .total-price {
@@ -1378,10 +1497,16 @@ th:last-child {
 
 .checkout {
   display: inline-block;
-  background-color: var(--green);
-  color: white;
+  background-color: #25693F;
+  border-radius: 3rem;
+  color: #fff;
   padding: 1rem;
   margin-top: 1rem;
+}
+
+.checkout:hover{
+  background-color: var(--green);
+  color: #000;
 }
 
 @media only screen and (max-width: 567px) {
@@ -1629,4 +1754,39 @@ th:last-child {
 
 .left{
   margin-top: 150px;
+}
+
+
+
+
+
+
+
+
+
+
+
+/* top nav scrolling content related */
+
+
+.top-nav {
+  background-color: #25693f;
+  color: #fff;
+  padding: 10px 0;
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+.top-nav p {
+  margin: 0;
+  animation: marquee 15s linear infinite; /* Adjust the duration as needed */
+}
+
+@keyframes marquee {
+  from {
+    transform: translateX(100%);
+  }
+  to {
+    transform: translateX(-100%);
+  }
 }
