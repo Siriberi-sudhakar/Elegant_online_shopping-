@@ -226,7 +226,7 @@ Header
 }
 
 .top-nav {
-  background-color: var(--green);
+  background-color: #25693F;
   font-size: 1.3rem;
   color: var(--white);
 }
@@ -247,8 +247,10 @@ Navigation
 =================
 */
 .navigation {
-  height: 6rem;
-  line-height: 6rem;
+  height: 15rem;
+  line-height: 15rem;
+  background: #F8C027;
+
   
 }
 
@@ -372,8 +374,8 @@ Hero Area
 .hero .glide__slides {
   background-color: var(--grey2);
   position: relative;
-  height: calc(100vh - 6rem);
-  margin: 0 4rem;
+  height: calc(108vh - 10rem);
+  margin: 4 4rem;
   overflow: hidden;
 }
 
@@ -487,7 +489,7 @@ Hero Media Query
   .hero,
   .hero .glide__slides {
     margin: 0;
-    padding: 0 3rem;
+    padding: 1px -10px;
   }
 
   .hero .left h1 {
@@ -1504,13 +1506,13 @@ th:last-child {
 
 
   #bg1{
-    height: 90rem;
+    height: 50rem;
     width: 125rem;
   }
 
 
   #bg2{
-    height: 90rem;
+    height: 50rem;
     width: 125rem;
     margin-right: -10rem;
 
