@@ -395,11 +395,98 @@ Hero Area
 =================
 */
 
+
+
+
+/* Your existing CSS remains unchanged */
+#imageCarousel{
+  width: 135rem;
+
+}
+
+/* Add Bootstrap Carousel styles */
+.carousel-inner img {
+  width: 100%;
+  height: auto;
+}
+
+/* Adjustments for carousel positioning */
+.carousel {
+  margin-top: 0rem;
+  margin-left: -25rem;
+
+}
+
+@media only screen and (max-width: 567px) {
+  .carousel {
+    margin-top: -1rem;
+    margin-left: -10rem;
+    
+  }
+}
+
+
+
+
+/* Your custom styles go here */
+
+/* Optional: Adjust the carousel height for smaller screens */
+@media (max-width: 767px) {
+
+  .carousel {
+    margin-top: -1rem;
+    margin-left: -28rem;
+  
+  }
+
+
+
+
+  
+  .carousel-inner img {
+    width: 100%;
+    height: 50rem;
+  }
+
+
+  #imageCarousel{
+    width: 45rem;
+    height: 100rem;
+    margin-left: 0rem;
+    
+  
+  }
+
+
+  .carousel-inner {
+
+   
+    height: 100rem; /* Adjust as needed */
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 .hero,
 .hero .glide__slides {
   background-color: var(--grey2);
   position: relative;
-  height: calc(108vh - 10rem);
+  height: calc(105vh - 10rem);
   margin: 4 4rem;
   overflow: hidden;
 }
@@ -494,7 +581,7 @@ Hero Area
 .glide__slide--active .left {
   opacity: 1;
   top: 35%;
-}
+} 
 
 /*
 ======================
@@ -559,14 +646,15 @@ Hero Media Query
     width: 30rem;
   }
 
-  /*.center .right img.img2 {
+  .center .right img.img2 {
     width: 30rem !important;
-  } */
+  } 
 
   .hero,
   .hero .glide__slides {
-    margin: 0;
-    padding: 1px -10px;
+    height: 52rem;
+    margin: 0rem;
+    padding: 1px 0px;
   }
 
   .hero .left h1 {
@@ -586,7 +674,7 @@ Hero Media Query
     font-size: 2.5rem;
     width: 80%;
   }
-}
+} 
 
 /* Category Section */
 .section {
@@ -1040,7 +1128,7 @@ Hero Media Query
 
 /* Contact */
 .contact {
-  background-color: var(--black);
+  background-color: var(--grey2);
   color: var(--white);
   padding: 10rem 20rem;
 }
