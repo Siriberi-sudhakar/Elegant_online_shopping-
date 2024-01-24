@@ -30,51 +30,56 @@
       <div class="nav-center container d-flex">
 
 
-          <img src="images/elegant logo original.png" alt="" id="top_logo">
-          <a href="index.html" class="logo" id="name_logo"><h1 style="font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;">Elegant Sarees</h1></a>
+        <a href="index.html"><img src="images/elegantsareelogo.png" alt="" id="top_logo"></a>
+          <!--a href="index.html" class="logo" id="name_logo"><h1 style="font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;"></h1></a-->
 
-          <ul class="nav-list d-flex">
-            <li class="nav-item">
-              <a href="#home" class="nav-link">Home</a>
-            </li>
-            <li class="nav-item">
-              <a href="product.html" class="nav-link">Shop</a>
-            </li>
-            <li class="nav-item">
-            <a href="#terms" class="nav-link">Terms</a>
-            </li>
-            <li class="nav-item">
-              <a href="#about" class="nav-link">About</a>
-            </li>
-            <li class="nav-item">
-              <a href="#contact" class="nav-link">Contact</a>
-            </li>
-            <!--li class="icons d-flex">
-              <a href="login.html" class="icon">
-                <i class="bx bx-user"></i>
-              </a>
-              <div class="icon">
-                <i class="bx bx-search"></i>
-              </div>
-              <div class="icon">
-                <i class="bx bx-heart"></i>
-                <span class="d-flex">0</span>
-              </div->
-              <a href="cart.html" class="icon">
-                <i class="bx bx-cart"></i>
-                <span class="d-flex">0</span>
-              </a>
-            </li-->
-          </ul>
+        <ul class="nav-list d-flex">
+          
+          
+
+          <li class="nav-item">
+            <a href="index.html" class="nav-link">Home</a>
+            
+          </li>
+          <li class="nav-item">
+            <a href="product.html" class="nav-link">Shop</a>
+          </li>
+          <li class="nav-item">
+          <a href="#terms" class="nav-link">Terms</a>
+          </li>
+          <li class="nav-item">
+            <a href="#about" class="nav-link">About</a>
+          </li>
+          <li class="nav-item">
+            <a href="#contact" class="nav-link">Contact</a>
+          </li>
+          <!--li class="icons d-flex">
+            <a href="login.html" class="icon">
+              <i class="bx bx-user"></i>
+            </a>
+            <div class="icon">
+              <i class="bx bx-search"></i>
+            </div>
+            <div class="icon">
+              <i class="bx bx-heart"></i>
+              <span class="d-flex">0</span>
+            </div->
+            <a href="cart.html" class="icon">
+              <i class="bx bx-cart"></i>
+              <span class="d-flex">0</span>
+            </a>
+          </li-->
+        </ul>
 
         <div class="icons d-flex">
           <!--a href="#login.html" class="icon">
             <i class="bx bx-user"></i>
-          </a>
+          </a-->
+          <!--div class="icon">
           <div class="icon">
             <i class="bx bx-search"></i>
-          </div>
-          <div class="icon">
+          </div-->
+          <!--div class="icon">
             <i class="bx bx-heart"></i>
             <span class="d-flex">0</span>
           </div-->
@@ -212,7 +217,7 @@
           <div class="product-info">
             <span>MEN'S CLOTHES</span>
             <a href="">Concepts Solid Pink Men’s Polo</a>
-            <h4>$150</h4>
+            <h4>₹150</h4>
           </div>
           <ul class="icons">
             <li><i class="bx bx-heart"></i></li>
@@ -230,7 +235,7 @@
           <div class="product-info">
             <span>MEN'S CLOTHES</span>
             <a href="">Concepts Solid Pink Men’s Polo</a>
-            <h4>$150</h4>
+            <h4>₹150</h4>
           </div>
           <ul class="icons">
             <li><i class="bx bx-heart"></i></li>
@@ -247,7 +252,7 @@
           <div class="product-info">
             <span>MEN'S CLOTHES</span>
             <a href="">Concepts Solid Pink Men’s Polo</a>
-            <h4>$150</h4>
+            <h4>₹150</h4>
           </div>
           <ul class="icons">
             <li><i class="bx bx-heart"></i></li>
@@ -264,7 +269,7 @@
           <div class="product-info">
             <span>MEN'S CLOTHES</span>
             <a href="">Concepts Solid Pink Men’s Polo</a>
-            <h4>$150</h4>
+            <h4>₹150</h4>
           </div>
           <ul class="icons">
             <li><i class="bx bx-heart"></i></li>
@@ -279,6 +284,7 @@
     <footer class="footer">
       <div class="row">
         <div class="col d-flex">
+          
           <h4>INFORMATION</h4>
           <a href="">About us</a>
           <a href="">Contact Us</a>
@@ -352,8 +358,8 @@
             <div class="cart-info">
               <img src="${item.image}" alt="" />
               <div>
-                <p>${item.name}</p>
-                <span>Price: ₹${item.price}</span> <br />
+                <p style="font-weight:bold;">${item.name}<p>
+                <span style="color: #000000b3;">Rs. ${item.price}.00</span> <br />
                 <a href="#" onclick="removeFromCart('${item.id}')"><br/>remove</a>
               </div>
             </div>
