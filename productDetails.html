@@ -97,6 +97,10 @@
 
     <!-- Product Details -->
     <section class="section product-detail">
+      <div class="title">
+        <h1>Product Details</h1>
+        <p>See Product and Add To Cart</p>
+      </div>
       <div class="details container">
         <div class="left image-container">
           <div class="main">
@@ -108,24 +112,22 @@
           <h1>Boy’s T-Shirt By Handsome</h1>
           <div class="price">50</div>
           <form>
-            <div>
+            <!--div>
               <select>
-                <option value="Select ze" selected disabled>
-                  Select Size
-                </option>
+                <option value="Select ze">Select Size</option>
                 <option value="1">32</option>
                 <option value="2">42</option>
                 <option value="3">52</option>
                 <option value="4">62</option>
               </select>
               <span><i class="bx bx-chevron-down"></i></span>
-            </div>
+            </div-->
           </form>
           <form class="form">
             <input type="text" placeholder="1" />
-            <button type="button" class="addCart" onclick="addToCart()">Add To Cart</button>
+            <button type="button" class="addcart-btn"  onclick="addToCart()">Add To Cart</button>
           </form>
-          <h3>Product Detail</h3>
+          <h3>Product Description</h3>
           <p>
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero minima
             delectus nulla voluptates nesciunt quidem laudantium, quisquam
@@ -143,57 +145,27 @@
 
 
     <!-- Related -->
-    <section class="section featured">
-      <div class="top container">
-        <h1>Related Products</h1>
-        <a href="#" class="view-more">View more</a>
+    <section class="section new-arrival">
+      <div class="title">
+        <h1>Related</h1>
+        <p>All the latest picked from designer of our store</p>
       </div>
-      <div class="product-center container">
-        <div class="product-item">
-          <div class="overlay">
-            <a href="" class="product-thumb">
-              <img src="./images/product-5.jpg" alt="" />
-            </a>
-          </div>
-          <div class="product-info">
-            <span>MEN'S CLOTHES</span>
-            <a href="">Concepts Solid Pink Men’s Polo</a>
-            <h4>₹150</h4>
-          </div>
-          <ul class="icons">
-            <li><i class="bx bx-heart"></i></li>
-            <li><i class="bx bx-search"></i></li>
-            <li><i class="bx bx-cart"></i></li>
-          </ul>
-        </div>
-        <div class="product-item">
-          <div class="overlay">
-            <a href="" class="product-thumb">
-              <img src="./images/product-2.jpg" alt="" />
-            </a>
-            <span class="discount">40%</span>
-          </div>
-          <div class="product-info">
-            <span>MEN'S CLOTHES</span>
-            <a href="">Concepts Solid Pink Men’s Polo</a>
-            <h4>₹150</h4>
-          </div>
-          <ul class="icons">
-            <li><i class="bx bx-heart"></i></li>
-            <li><i class="bx bx-search"></i></li>
-            <li><i class="bx bx-cart"></i></li>
-          </ul>
-        </div>
-        <div class="product-item">
-          <div class="overlay">
-            <a href="" class="product-thumb">
+
+      <div class="product-center">
+
+
+        <div class="product-item" id="Fproduct1">
+          <div class="overlay" onclick="redirectToProductDetails('Fproduct1', 'Quis Nostrud Exercitation', 700, './images/product-7.jpg')">
+            <a  class="product-thumb">
               <img src="./images/product-7.jpg" alt="" />
             </a>
+            <span class="discount">50%</span>
           </div>
           <div class="product-info">
-            <span>MEN'S CLOTHES</span>
-            <a href="">Concepts Solid Pink Men’s Polo</a>
-            <h4>₹150</h4>
+            <!--span>MEN'S CLOTHES</span-->
+            <a href="#" style="font-weight: bold;">Quis Nostrud Exercitation</a>
+            <h2>₹700</h2> <br>
+            
           </div>
           <ul class="icons">
             <li><i class="bx bx-heart"></i></li>
@@ -201,17 +173,47 @@
             <li><i class="bx bx-cart"></i></li>
           </ul>
         </div>
-        <div class="product-item">
-          <div class="overlay">
-            <a href="" class="product-thumb">
+
+
+
+
+        <div class="product-item" id="Fproduct2">
+          <div class="overlay" onclick="redirectToProductDetails('Fproduct2', 'Sonata White Men’s Shirt', 700, './images/product-4.jpg')">
+            <a  class="product-thumb">
               <img src="./images/product-4.jpg" alt="" />
+            </a>
+          </div>
+
+          <div class="product-info">
+            <!--span>MEN'S CLOTHES</span-->
+            <a href="#" style="font-weight: bold;">Sonata White Men’s Shirt</a>
+            <h2>₹700</h2> <br>
+            
+          </div>
+          <ul class="icons">
+            <li><i class="bx bx-heart"></i></li>
+            <li><i class="bx bx-search"></i></li>
+            <li><i class="bx bx-cart"></i></li>
+          </ul>
+        </div>
+
+
+
+
+
+
+        <div class="product-item" id="Fproduct3">
+          <div class="overlay" onclick="redirectToProductDetails('Fproduct3', 'Concepts Solid Pink Men’s Polo', 700, './images/productOrigi-1.jpg')">
+            <a  class="product-thumb">
+              <img src="./images/productOrigi-1.jpg" alt="" />
             </a>
             <span class="discount">40%</span>
           </div>
           <div class="product-info">
-            <span>MEN'S CLOTHES</span>
-            <a href="">Concepts Solid Pink Men’s Polo</a>
-            <h4>₹150</h4>
+            <!--span>MEN'S CLOTHES</span-->
+            <a href="#" style="font-weight: bold;">Concepts Solid Pink Men’s Polo</a>
+            <h2>₹700</h2> <br>
+            
           </div>
           <ul class="icons">
             <li><i class="bx bx-heart"></i></li>
@@ -219,8 +221,35 @@
             <li><i class="bx bx-cart"></i></li>
           </ul>
         </div>
-      </div>
+
+
+
+
+
+
+        <div class="product-item" id="Fproduct4">
+          <div class="overlay" onclick="redirectToProductDetails('Fproduct4', 'Edor do eiusmod tempor', 700, './images/product-6.jpg')">
+            <a class="product-thumb">
+              <img src="./images/product-6.jpg" alt="" />
+            </a>
+          </div>
+          <div class="product-info">
+            <!--span>MEN'S CLOTHES</span-->
+            <a href="#" style="font-weight: bold;">Edor do eiusmod tempor</a>
+            <h2>₹700</h2> <br>
+            
+          </div>
+          <ul class="icons">
+            <li><i class="bx bx-heart"></i></li>
+            <li><i class="bx bx-search"></i></li>
+            <li><i class="bx bx-cart"></i></li>
+          </ul>
+        </div>
+
     </section>
+
+
+
     <!-- Footer -->
     <footer class="footer">
       <div class="row">
@@ -290,7 +319,7 @@
       document.querySelector('.main img').src = selectedProduct.image;
       document.querySelector('.right span').innerText = selectedProduct.name;
       document.querySelector('.right h1').innerText = selectedProduct.name;
-      document.querySelector('.right .price').innerText = `₹${selectedProduct.price}`;
+      document.querySelector('.right .price').innerText = `Rs. ${selectedProduct.price}.00`;
     } else {
       // Handle the case when there are no selected product details
       console.error('No product details found.');
@@ -367,7 +396,35 @@
 
 
 
+<!--product display purpose-->
 
+
+
+
+
+
+
+<!--gpt provided -->
+
+
+
+
+
+
+<script>
+  function redirectToProductDetails(productId, productName, productPrice, productImage) {
+    // Store selected product details in localStorage
+    localStorage.setItem('selectedProduct', JSON.stringify({
+      id: productId,
+      name: productName,
+      price: productPrice,
+      image: productImage
+    }));
+
+    // Redirect to productDetails.html
+    window.location.href = 'productDetails.html';
+  }
+</script>
 
 
 
