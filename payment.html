@@ -121,41 +121,52 @@
 
 <!-- Your existing JavaScript code -->
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 <script>
-  // Function to display cart item details and total price
   function displayPaymentDetails() {
-    const queryString = window.location.search;
-    const urlParams = new URLSearchParams(queryString);
-    const cartItemsParam = urlParams.get('cartItems');
-
-    if (cartItemsParam) {
-      const cartItems = JSON.parse(decodeURIComponent(cartItemsParam));
-
-      const paymentDetailsTextarea = document.getElementById('paymentDetails');
-
-      // Calculate total price
-      const totalPrice = cartItems.reduce((total, item) => {
-        const itemTotal = (item.price || 0) * (item.quantity || 1);
-        return total + itemTotal;
-      }, 0);
-
-      // Display cart item details in the textarea
-      const paymentDetails = cartItems.map(item => {
-        const itemTotal = (item.price || 0) * (item.quantity || 1);
-        return `\n---> ${item.name} - ₹ ${item.price || 0}.00 --> Qty: ${item.quantity || 1}`;
-      });
-
-      // Add the total price at the end with bold styling
-      paymentDetails.push(`\n \nTotal Price: ₹${totalPrice.toFixed(2)}`);
-
-      // Set the content of the textarea
-      paymentDetailsTextarea.value = paymentDetails.join('\n');
-    }
+    // Get cart items from local storage
+    const cartItems = JSON.parse(localStorage.getItem('cartItems')) || [];
+  
+    const paymentDetailsTextarea = document.getElementById('paymentDetails');
+  
+    // Calculate total price
+    const totalPrice = cartItems.reduce((total, item) => {
+      const itemTotal = (item.price || 0) * (item.quantity || 1);
+      return total + itemTotal;
+    }, 0);
+  
+    // Display cart item details in the textarea
+    const paymentDetails = cartItems.map(item => {
+      const itemTotal = (item.price || 0) * (item.quantity || 1);
+      return `\n---> ${item.name} - ₹ ${item.price || 0}.00 --> Qty: ${item.quantity || 1}`;
+    });
+  
+    // Add the total price at the end with bold styling
+    paymentDetails.push(`\n \nTotal Price: ₹${totalPrice.toFixed(2)}`);
+  
+    // Set the content of the textarea
+    paymentDetailsTextarea.value = paymentDetails.join('\n');
   }
-
+  
   // Call the function to display details when the page loads
   displayPaymentDetails();
-</script>
+  </script>
 
 </body>
 </html>
