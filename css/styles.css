@@ -250,6 +250,7 @@ Navigation
   height: 15rem;
   line-height: 15rem;
   background: #F8C027;
+  border: 1px solid #fff;
 
   
 }
@@ -772,6 +773,12 @@ Hero Media Query
 }
 
 
+.addcart-btn:hover{
+  background-color: #119744;
+  color: #000;
+}
+
+
 
 
 
@@ -1144,8 +1151,7 @@ Hero Media Query
 .contact {
   background-color: #e9d7d3;
   color: var(--white);
-  padding: 10rem 20rem;
-  border-bottom: 2px solid black;
+  padding: 10rem 20rem
 }
 
 .contact .row {
@@ -1225,6 +1231,7 @@ Hero Media Query
 .footer {
   padding: 7rem 1rem;
   background: #F8C027;
+  border-top: 2px solid black;
 }
 
 footer .row {
@@ -1634,13 +1641,13 @@ th:last-child {
 }
 
 .checkout:hover{
-  background-color: var(--green);
+  background-color: #3aa864;
   color: #000;
 }
 
 @media only screen and (max-width: 567px) {
   .cart-info p {
-    display: none;
+    
   }
 }
 
@@ -1661,6 +1668,7 @@ th:last-child {
   background-color: #f6f2f1;
   margin-bottom: 2rem;
   height: 45rem;
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.4);
 }
 
 .product-detail .left .main img {
@@ -1674,6 +1682,11 @@ th:last-child {
   font-size: 1.5rem;
   margin-bottom: 1rem;
 }
+
+.product-detail .right{
+  margin-top: 15rem;
+}
+
 
 .product-detail .right h1 {
   font-size: 4rem;
@@ -1733,6 +1746,7 @@ th:last-child {
   padding: 0.8rem 4rem;
   color: #fff;
   border-radius: 3rem;
+  
 }
 
 .product-detail h3 {
