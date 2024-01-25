@@ -178,7 +178,8 @@
               </div>
             </div>
           </td>
-          <td><input type="number" value="1" min="1" /></td>
+          <!--td><input type="number" value="1" min="1" /></td-->
+          <td><input type="number" value="1" min="1" onchange="updateCartItemQuantity('product1', this.value)" /></td>
           <td>$60.00</td>
         </tr>
       </table>
@@ -197,27 +198,32 @@
             <td>$250</td>
           </tr-->
         </table>
-        <a href="payment.html" id="proceedToPaymentBtn" class="checkout btn" >Proceed To Checkout</a>
+        <a href="#" id="proceedToPaymentBtn" onclick="proceedToCheckout()" class="checkout btn" >Proceed To Checkout</a>
       </div>
     </div>
 
     <!-- Latest Products -->
-    <section class="section featured">
-      <div class="top container">
+    <section class="section new-arrival">
+      <div class="title">
         <h1>Latest Products</h1>
-        <a href="#" class="view-more">View more</a>
+        <p>All the latest picked from designer of our store</p>
       </div>
-      <div class="product-center container">
-        <div class="product-item">
-          <div class="overlay">
-            <a href="" class="product-thumb">
-              <img src="./images/product-6.jpg" alt="" />
+
+      <div class="product-center">
+
+
+        <div class="product-item" id="Fproduct1">
+          <div class="overlay" onclick="redirectToProductDetails('Fproduct1', 'Quis Nostrud Exercitation', 700, './images/product-7.jpg')">
+            <a  class="product-thumb">
+              <img src="./images/product-7.jpg" alt="" />
             </a>
+            <span class="discount">50%</span>
           </div>
           <div class="product-info">
-            <span>MEN'S CLOTHES</span>
-            <a href="">Concepts Solid Pink Men’s Polo</a>
-            <h4>₹150</h4>
+            <!--span>MEN'S CLOTHES</span-->
+            <a href="#" style="font-weight: bold;">Quis Nostrud Exercitation</a>
+            <h2>₹700</h2> <br>
+            
           </div>
           <ul class="icons">
             <li><i class="bx bx-heart"></i></li>
@@ -225,17 +231,47 @@
             <li><i class="bx bx-cart"></i></li>
           </ul>
         </div>
-        <div class="product-item">
-          <div class="overlay">
-            <a href="" class="product-thumb">
-              <img src="./images/product-1.jpg" alt="" />
+
+
+
+
+        <div class="product-item" id="Fproduct2">
+          <div class="overlay" onclick="redirectToProductDetails('Fproduct2', 'Sonata White Men’s Shirt', 700, './images/product-4.jpg')">
+            <a  class="product-thumb">
+              <img src="./images/product-4.jpg" alt="" />
+            </a>
+          </div>
+
+          <div class="product-info">
+            <!--span>MEN'S CLOTHES</span-->
+            <a href="#" style="font-weight: bold;">Sonata White Men’s Shirt</a>
+            <h2>₹700</h2> <br>
+            
+          </div>
+          <ul class="icons">
+            <li><i class="bx bx-heart"></i></li>
+            <li><i class="bx bx-search"></i></li>
+            <li><i class="bx bx-cart"></i></li>
+          </ul>
+        </div>
+
+
+
+
+
+
+        <div class="product-item" id="Fproduct3">
+          <div class="overlay" onclick="redirectToProductDetails('Fproduct3', 'Concepts Solid Pink Men’s Polo', 700, './images/productOrigi-1.jpg')">
+            <a  class="product-thumb">
+              <img src="./images/productOrigi-1.jpg" alt="" />
             </a>
             <span class="discount">40%</span>
           </div>
           <div class="product-info">
-            <span>MEN'S CLOTHES</span>
-            <a href="">Concepts Solid Pink Men’s Polo</a>
-            <h4>₹150</h4>
+            <!--span>MEN'S CLOTHES</span-->
+            <a href="#" style="font-weight: bold;">Concepts Solid Pink Men’s Polo</a>
+            <h2>₹700</h2> <br>
+            
           </div>
           <ul class="icons">
             <li><i class="bx bx-heart"></i></li>
@@ -243,16 +279,23 @@
             <li><i class="bx bx-cart"></i></li>
           </ul>
         </div>
-        <div class="product-item">
-          <div class="overlay">
-            <a href="" class="product-thumb">
-              <img src="./images/product-3.jpg" alt="" />
+
+
+
+
+
+
+        <div class="product-item" id="Fproduct4">
+          <div class="overlay" onclick="redirectToProductDetails('Fproduct4', 'Edor do eiusmod tempor', 700, './images/product-6.jpg')">
+            <a class="product-thumb">
+              <img src="./images/product-6.jpg" alt="" />
             </a>
           </div>
           <div class="product-info">
-            <span>MEN'S CLOTHES</span>
-            <a href="">Concepts Solid Pink Men’s Polo</a>
-            <h4>₹150</h4>
+            <!--span>MEN'S CLOTHES</span-->
+            <a href="#" style="font-weight: bold;">Edor do eiusmod tempor</a>
+            <h2>₹700</h2> <br>
+            
           </div>
           <ul class="icons">
             <li><i class="bx bx-heart"></i></li>
@@ -260,25 +303,10 @@
             <li><i class="bx bx-cart"></i></li>
           </ul>
         </div>
-        <div class="product-item">
-          <div class="overlay">
-            <a href="" class="product-thumb">
-              <img src="./images/product-2.jpg" alt="" />
-            </a>
-          </div>
-          <div class="product-info">
-            <span>MEN'S CLOTHES</span>
-            <a href="">Concepts Solid Pink Men’s Polo</a>
-            <h4>₹150</h4>
-          </div>
-          <ul class="icons">
-            <li><i class="bx bx-heart"></i></li>
-            <li><i class="bx bx-search"></i></li>
-            <li><i class="bx bx-cart"></i></li>
-          </ul>
-        </div>
-      </div>
+
     </section>
+
+
 
     <!-- Footer -->
     <footer class="footer">
@@ -428,7 +456,7 @@
 
 
 
-<script>
+<!--script>
   // Your existing JavaScript code for displaying cart items
 
   // Function to update the "Proceed to Payment" button link
@@ -448,11 +476,123 @@
 
   // Call the function to update the link when the page loads
   updateProceedToPaymentLink();
-</script>
+</script-->
 
 
 
 
+
+<script>
+  function updateCartItemQuantity(productId, newQuantity) {
+    // Get existing cart items from local storage
+    const cartItems = JSON.parse(localStorage.getItem('cartItems')) || [];
+  
+    // Find the item in the cart and update its quantity
+    const updatedCart = cartItems.map(item => {
+      if (item.id === productId) {
+        item.quantity = parseInt(newQuantity, 10);
+      }
+      return item;
+    });
+  
+    // Update local storage with the modified cart
+    localStorage.setItem('cartItems', JSON.stringify(updatedCart));
+  }
+  </script>
+
+
+
+
+
+  <!--empty cart related -->
+  
+  
+
+  <script>
+    function proceedToCheckout() {
+      // Get existing cart items from local storage
+      const cartItems = JSON.parse(localStorage.getItem('cartItems')) || [];
+    
+      // Check if the cart is empty
+      if (cartItems.length === 0) {
+        swal("Your cart is empty.", "Please add items before proceeding to checkout.", "error");
+      } else {
+        // Redirect to the payment page
+        window.location.href = 'payment.html';
+      }
+    }
+
+    </script>
+
+
+
+
+
+
+
+
+
+    <script>
+      // Function to handle adding a product to the cart
+      function addToCart(productId, productName, productPrice, productImage) {
+  
+  
+        swal("Product added to cart.", "click on cart icon.", "success");
+        // Get the existing cart items from localStorage or initialize an empty array
+        const cartItems = JSON.parse(localStorage.getItem('cartItems')) || [];
+    
+        // Check if the product is already in the cart
+        const existingProductIndex = cartItems.findIndex(item => item.id === productId);
+    
+        if (existingProductIndex !== -1) {
+          // If the product is already in the cart, increase the quantity
+          cartItems[existingProductIndex].quantity += 1;
+        } else {
+          // If the product is not in the cart, add it with quantity 1
+          cartItems.push({
+            id: productId,
+            name: productName,
+            price: productPrice,
+            image: productImage,
+            quantity: 1,
+          });
+        }
+    
+        // Save the updated cartItems array back to localStorage
+        localStorage.setItem('cartItems', JSON.stringify(cartItems));
+    
+        // Optional: Provide some visual feedback to the user (e.g., show a notification)
+        
+    
+        // Optional: Update the cart icon or any other UI elements indicating the number of items in the cart
+        updateCartIcon(cartItems.length);
+      }
+    </script>
+  
+  
+  
+  
+  <!--gpt provided -->
+  
+  
+  
+  
+  
+  
+  <script>
+    function redirectToProductDetails(productId, productName, productPrice, productImage) {
+      // Store selected product details in localStorage
+      localStorage.setItem('selectedProduct', JSON.stringify({
+        id: productId,
+        name: productName,
+        price: productPrice,
+        image: productImage
+      }));
+  
+      // Redirect to productDetails.html
+      window.location.href = 'productDetails.html';
+    }
+  </script>
 
 
 
@@ -468,4 +608,12 @@
 
 
   </body>
+
+<!--sweet alert libraries-->
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" ></script>
+	<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js" ></script>
+
+
+
 </html>
