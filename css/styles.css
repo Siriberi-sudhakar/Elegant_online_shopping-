@@ -257,6 +257,7 @@ Navigation
 
 .nav-center {
   justify-content: space-between;
+  margin-top: -3rem;
 }
 
 .nav-list .icons {
@@ -264,17 +265,16 @@ Navigation
 }
 
 .nav-center .nav-item:not(:last-child) {
-  margin-right: 0.5rem;
+  margin-right: 1.5rem;
 }
 
 .nav-center .nav-link {
   font-size: 1.8rem;
   padding: 1rem;
- 
 }
 
 .nav-center .nav-link:hover {
-  color: var(--green);
+  color: #25693F;
 }
 
 .nav-center .hamburger {
@@ -296,9 +296,12 @@ Navigation
   cursor: pointer;
   font-size: 3rem;
   padding: 0 1rem;
-  color: #555;
-  margin-right: -5rem;
+  color: #fff;
+  margin-right: -3rem;
   position: relative;
+}
+.icon:hover{
+  color: #25693F;
 }
 
 .icon:not(:last-child) {
@@ -1646,8 +1649,10 @@ th:last-child {
 }
 
 @media only screen and (max-width: 567px) {
-  .cart-info p {
-    
+  #top_logo{
+    width: 12rem;
+    height: 12rem; 
+    margin-top: -0px;
   }
 }
 
@@ -1873,9 +1878,11 @@ th:last-child {
 
 
 #top_logo{
-  width: 10rem;
-  height: 10rem; 
-  margin-top: -0px;
+  width: 14rem;
+  height: 14rem; 
+  margin-top: 8px;
+  position: relative;
+  right: 2rem;
 }
 
 
